@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Result_ocr"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Captured Text:"
+        android:textAllCaps="false"
+        android:layout_margin="30dp"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/title_size"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_margin="30dp">
+
+        <TextView
+            android:id="@+id/capture"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textColor="@color/textColor"
+            android:background="@drawable/border"
+            />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_above="@id/sum_btn">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of lines:"
+            android:textAllCaps="false"
+            android:layout_margin="10dp"
+            android:textColor="@color/textColor"
+            />
+        <EditText
+            android:id="@+id/nol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_margin="10dp"
+            android:textColor="@color/textColor"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sum_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:text="Summarize"
+        android:textColor="@color/textColor"
+        android:background="@color/colorPrimaryDark"/>
+
+</RelativeLayout>
